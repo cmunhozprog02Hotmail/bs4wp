@@ -23,4 +23,8 @@ register_nav_menus(array(
     'principal' => __('Menu principal', 'bs4wp')
 ));
 
+// Definir aa miniaturas dos posts
+add_theme_support('post-thumbnails');
+set_post_thumbnail_size(1280, 720, true);
+
 ?>

@@ -8,9 +8,8 @@
                 <h3 class="mb-3 pb-2 border-bottom"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <div class="row">
                     <div class="col-md-12 col-lg-6 mb-3">
-                        <a href="">
-                             <img src="<?php the_permalink(); ?>">
-                             <?php the_post_thumbnail(); ?>
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid')); ?>
                         </a>
                     </div>
                     <div class="col-md-12 col-lg-6 mb-3">
@@ -23,17 +22,16 @@
 
             <?php else : get_404_template(); endif; ?>
 
-                
-
-                <div class="blog-pagination">
-                    <a href="" class="btn btn-outline-my-color-5">Mais antigos</a>
-                    <a href="" class="btn btn-outline-my-color-5">Mais novos</a>
-                </div>
-
-                <?php get_sidebar(); ?>
-
+            <div class="blog-pagination">
+                <a href="" class="btn btn-outline-my-color-5">Mais antigos</a>
+                <a href="" class="btn btn-outline-my-color-5">Mais novos</a>
             </div>
 
         </div>
 
-   <?php get_footer(); ?>
+            <?php get_sidebar(); ?>
+
+        </div>
+    </div>
+
+<?php get_footer(); ?>
